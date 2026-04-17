@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Mediator : MonoBehaviour
+public class CubeReleaseHandler : MonoBehaviour
 {
     [SerializeField] private CubeSpawner _cubeSpawner;
     [SerializeField] private BombSpawner _bombSpawner;

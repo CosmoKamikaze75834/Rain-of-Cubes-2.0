@@ -3,13 +3,12 @@ using UnityEngine;
 
 public abstract class BaseText : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI _text;
-    [SerializeField] private string _label;
-    [SerializeField] protected CounterType _counterType;
+    [SerializeField] protected TextMeshProUGUI _text;
 
     private void OnEnable()
     {
         Subscribe();
+        UpdateUI();
     }
 
     private void OnDisable()
@@ -17,11 +16,9 @@ public abstract class BaseText : MonoBehaviour
         Unsubscribe();
     }
 
-    public void Change(int amount)
-    {
-        _text.text = _label + amount.ToString();
-    }
-
     protected virtual void Subscribe() { }
+
     protected virtual void Unsubscribe() { }
+
+    protected virtual void UpdateUI() { }
 }

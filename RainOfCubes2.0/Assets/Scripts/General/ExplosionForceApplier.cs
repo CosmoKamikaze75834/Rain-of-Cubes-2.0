@@ -29,9 +29,9 @@ public class ExplosionForceApplier : MonoBehaviour
 
         foreach (Collider collider in colliders)
         {
-            if (collider.attachedRigidbody != null && collider.attachedRigidbody != excludedObject && collider.TryGetComponent<Cube>(out _))
+            if (collider.gameObject.TryGetComponent(out Rigidbody rigidbody))
             {
-                cubes.Add(collider.attachedRigidbody);
+                cubes.Add(rigidbody);
             }
         }
 

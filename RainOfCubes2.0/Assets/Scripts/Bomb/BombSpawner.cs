@@ -3,18 +3,10 @@ using UnityEngine;
 
 public class BombSpawner : BaseSpawner<Bomb>
 {
-    private int _spawnCount;
-
-    public event Action<int> NumberObjectsChanged;
-
     public void Create(Vector3 position)
     {
-        Bomb bomb = GetObject();
+        Bomb bomb = Spawn(position);
 
-        _spawnCount++;
-        NumberObjectsChanged?.Invoke(_spawnCount);
-
-        bomb.transform.position = position;
         bomb.Dissapeared += ReleaseObject;
         bomb.Activate();
     }

@@ -270,8 +270,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _text: {fileID: 252027801}
-  _label: 'Bomb spawned - '
-  _counterType: 0
   _bombSpawner: {fileID: 1488786597}
 --- !u!1 &287542419
 GameObject:
@@ -417,12 +415,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 287542419}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15ea0c53d3d153044987e8291bcc89e7, type: 3}
+  m_Script: {fileID: 11500000, guid: d7539f87434d8a340ae8e12ca39042b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _text: {fileID: 287542422}
-  _label: 'Bomb created - '
-  _counterType: 1
   _bombSpawner: {fileID: 1488786597}
 --- !u!1 &326416010
 GameObject:
@@ -434,7 +430,7 @@ GameObject:
   m_Component:
   - component: {fileID: 326416011}
   m_Layer: 5
-  m_Name: InformationBombText
+  m_Name: Bomb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1209,8 +1205,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _text: {fileID: 957574684}
-  _label: 'Cube spawned - '
-  _counterType: 0
   _cubeSpawner: {fileID: 1037709241}
 --- !u!1 &963194225
 GameObject:
@@ -1314,6 +1308,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1037709240}
   - component: {fileID: 1037709241}
+  - component: {fileID: 1037709242}
   m_Layer: 0
   m_Name: SpawnerCube
   m_TagString: Untagged
@@ -1351,9 +1346,22 @@ MonoBehaviour:
   _prefab: {fileID: 5504089957133351527, guid: 36637a8268e0451429baa3d18b537474, type: 3}
   _poolCapacity: 5
   _poolMaxSize: 5
+  _position: {fileID: 1037709242}
+--- !u!114 &1037709242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037709238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a0b78ffc96b74e45a89e38ab00f4453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   _center: {fileID: 529282318}
-  _platformWidth: 5
-  _platformDepth: 5
+  _platformWidth: 10
+  _platformDepth: 10
   _hight: 5
 --- !u!1 &1161448139
 GameObject:
@@ -1499,12 +1507,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1161448139}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1afd7dc718d0c814cbea31562821b14d, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f862fd468769434daba965f5761769a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _text: {fileID: 1161448142}
-  _label: 'Cube active - '
-  _counterType: 2
   _cubeSpawner: {fileID: 1037709241}
 --- !u!1 &1208097483
 GameObject:
@@ -1516,7 +1522,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1208097484}
   m_Layer: 5
-  m_Name: InformationCubeText
+  m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1667,7 +1673,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1986398101}
   m_Layer: 5
-  m_Name: InformationText
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1838,12 +1844,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1987715381}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1afd7dc718d0c814cbea31562821b14d, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c6d063c549bd884d8fc5bf717758117, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _text: {fileID: 1987715384}
-  _label: 'Cube created - '
-  _counterType: 1
   _cubeSpawner: {fileID: 1037709241}
 --- !u!1 &2025087788
 GameObject:
@@ -1989,12 +1993,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2025087788}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15ea0c53d3d153044987e8291bcc89e7, type: 3}
+  m_Script: {fileID: 11500000, guid: 343d0c3d488ce3845bd64ac7f47e6a29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _text: {fileID: 2025087791}
-  _label: 'Bomb active - '
-  _counterType: 2
   _bombSpawner: {fileID: 1488786597}
 --- !u!1001 &8038437450573088874
 PrefabInstance:
